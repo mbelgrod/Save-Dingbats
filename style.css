@@ -1,0 +1,301 @@
+@font-face {
+    font-family: "Save";
+    src: url('Save.ttf');
+}
+
+@font-face {
+    font-family: "SignPainter";
+    src: url('SignPainter HouseBrush Regular.ttf')
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    display: flex;
+    height: auto;
+    max-width: 100%;
+    flex-direction: column;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  .cta.yellow {
+    background-color: yellow;
+    border: 3px solid red;
+    border-radius: 25px;
+    /* This isn't working */   
+
+  }
+
+  .cta.white {
+    background-color: white;
+    order: 3px solid red;
+  }
+
+  
+.description{
+    font-family: "grange", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: .01em;
+    color: navy;
+    font-size: 18pt;
+    line-height: 1.2em;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+
+
+    
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 80vh;
+    padding: 120px;
+    background-color: lightblue;
+    border: 3px solid navy;
+    font-family: "Save";
+    color: red;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes spark {
+    from {
+        transform: scale(.9) translate(-50%, -50%);
+        transform-origin: 0 0;
+    }
+    to {
+        transform: scale(1.1) translate(-50%, -50%);
+        transform-origin: 0 0;
+    }
+}
+.title-spark {
+    position: absolute;
+    width: 1100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    animation-name: spark;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+@keyframes title {
+    from {
+        transform: scale(.9);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+.title-heading {
+    font-size: 200px;
+    letter-spacing: -.01em;
+    z-index: 9;
+    font-weight: normal;
+    animation-name: title;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 80vh;
+    border: 3px solid navy;
+    border-radius: 25px;
+    position: relative;
+    padding: 20px;
+}
+
+.header-text {
+    font-family: "SignPainter";
+    font-size: 200px;
+    color: navy;
+    text-align: center;
+    vertical-align: middle;
+    line-height: .85em;
+    overflow-wrap: anywhere;
+    border: none;
+    outline: none;
+}
+.header:hover .header-text {
+    font-family: "Save";
+    font-style: normal;
+    font-size: 13vw;
+}
+
+.cta {
+    font-family: "grange-extended", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30pt;
+    color: red;
+    /* z-index: 2; */
+    background-color: yellow;
+    border: 3px solid red;
+    border-radius: 50px;
+    text-align: center;
+    line-height: .9em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transform: translate(-50%, -50%);
+    /* Adjust type size so when it's on mobile it's still one line */
+}
+.cta-white {
+    background-color: white;
+    border: 3px solid red;
+    border-radius: 0;
+}
+
+.glyphs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 80vh;
+    position: relative;
+    background-color: beige;
+    border: 3px solid red;
+    border-radius: 25px;
+
+    font-family: "Save";
+    font-size: 100pt;
+    font-style: normal;
+    line-height: .85em;
+    color: red;
+
+    text-align: center;
+    padding: 2vw;
+
+    overflow-wrap: anywhere;
+}
+
+
+  .application {
+    display: flex;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    background-color: none;
+    border: 3px solid navy;
+    border-radius: 25px;
+     /* Add in png */
+  }
+
+  .tester {
+    display: flex;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
+    background-color: lightblue;
+    border: 3px solid navy;
+    
+    font-family: "Save";
+    font-style: normal;
+    font-size: 100pt;
+
+    line-height: .85em;
+    color: navy;
+
+     
+    /* Can I make it cycle through some colors? */
+    /* Can I make it change type sizes based on the line break? */
+
+    text-align: center;
+    padding: 2vw;
+
+    
+     
+     
+  }
+
+  editable {
+    border: none;
+    outline: none;
+    overflow-wrap: anywhere;
+
+     /* Make sure spell check dotted red line doesn't come up */
+}
+
+[contenteditable='true'] {
+    caret-color: red;
+}
+
+
+/* Mobile breakpoints */
+@media (max-width: 1100px) {
+    .description {
+        padding-left:0;
+        padding-right:0;
+    }
+    .title-heading {
+        font-size: 72.72px;
+    }
+    .title-spark {
+    width: 400px;
+    }
+    .title {
+        min-height: 29vh;
+    }
+
+    .header {
+        min-height: 29vh;
+    }
+
+    .header-text {
+        font-size: 72.72px;
+    }
+
+    .glyphs {
+        min-height: 29vh;
+        font-size: 36pt;
+    }
+
+    .application {
+        min-height: 29vh;
+    }
+
+    .tester {
+        min-height: 29vh;
+        font-size: 36pt;
+    }
+    .cta {
+        font-size: 18pt;
+    }
+
+    .description{
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    /* Edit text size of cta so it doesn't wrap around */
+    /* Edit padding for description text */
+}
