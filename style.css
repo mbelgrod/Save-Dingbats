@@ -201,8 +201,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-
-    background-color: none;
+    background-image: url("Application.JPG");
+    background-size: cover;
+    background-position: center;
     border: 3px solid navy;
     border-radius: 25px;
      /* Add in png */
